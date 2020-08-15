@@ -1,0 +1,38 @@
+	
+			Instruction for ScanEP
+	
+		VEC changer
+	This function change VEC group in all files to VEC group in second file
+	1) Select directory with .inp files in first line
+	2) Select VEC file in second line
+
+		Method Changer
+	This function change settings in all files to settings in second file
+	1) Select directory with .inp files in first line
+	2) Select file with new settings in second line
+
+		Inp files generator
+	This function interpolate geometry between two .xyz files with step = [0; 0.5]
+	and generate inp files with settings groups
+	1) Select file with GAMESS/FireFly Settings
+	2) Select first file with geometry in xyz coordinates
+	3) Select second file with geometry in xyz coordinates
+	4) Select directory to save files
+	5) Write a mask for generated files
+	6) Select interpolated step in spin box
+	7) Select 'Dimer' if you work with dimers else try 'Monomer'
+
+		Molecular Delimiter
+	This function delimiter molecular dynamics or crystal fragment pack to 
+	monomers and dimers
+	1) Select file with pack
+	2) Select minimum atoms in one molecule
+	3) Select maximum contact length between molecueles in dimer
+	
+		Plot Editor
+	This function plot the Energy profile for QDPT results
+	1) Select directory with .out files
+	2) Select properties for axes and lines
+
+	If you have a question, write me: scanepfeedback@gmail.com
+	
