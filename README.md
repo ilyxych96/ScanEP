@@ -1,1 +1,1 @@
-Download all files in folder and run ScanEP.pyw
+Download all files to one folder and run ScanEP.pyw
