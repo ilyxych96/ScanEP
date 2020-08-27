@@ -46,8 +46,9 @@ ScanEP is a multimodule programm that helps to calculate energy profiles. It inc
 ### Installation
 
 Download all files in directory .../ScanEp/
+
 The following libraries are required to run:
-PqQT5, os, re, glob, shutil, matplotlib, numpy, math, copy, time.
+>PqQT5, os, re, glob, shutil, matplotlib, numpy, math, copy, time.
 
 If you have all this packages, run ScanEp.pyw
 
