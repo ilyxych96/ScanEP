@@ -43,7 +43,7 @@ ScanEP is a multimodule programm that helps to calculate energy profiles. It inc
   - Set as "Directory with QDPT files" path to folder with QDPT .out files
   - Set lines and grid settings
 
-### Installation
+## Installation
 
 Download all files in directory .../ScanEp/
 
@@ -52,7 +52,7 @@ The following libraries are required to run:
 
 If you have all this packages, run ScanEp.pyw
 
-### Todos
+## Todos
 
  - MORE Tests
  - Upgrade z-matrix builder for 3+ molecules
