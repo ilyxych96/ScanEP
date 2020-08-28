@@ -10,7 +10,7 @@ ScanEP is a multimodule programm that helps to calculate energy profiles. It inc
   - Molecular delimiter
   - QDPT result processing
 
-# Module assignment and Instructions
+## Module assignment and Instructions
 ### VEC Changer
 >If you need write VEC group to all files in folder you can:
   - Set as "main file" path to folder with .inp files
