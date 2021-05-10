@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>815</width>
+    <height>656</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>19</y>
+     <width>791</width>
+     <height>621</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="10" column="0" colspan="9" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="label_21">
+      <property name="text">
+       <string> *** GRID SETTINGS *** </string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1" colspan="3">
+     <widget class="QComboBox" name="comboBox_3">
+      <item>
+       <property name="text">
+        <string>blue</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>orange</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>green</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>red</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cyan</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>magenta</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>yellow</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>black</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="5" column="1" colspan="3">
+     <widget class="QComboBox" name="comboBox_1">
+      <item>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>--</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>-.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>..</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="9" column="1" colspan="3">
+     <widget class="QComboBox" name="comboBox_5">
+      <item>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="20" column="0" colspan="9" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="label_18">
+      <property name="text">
+       <string> *** OUTPUT PARAMETERS*** </string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="4">
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>Ymin</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="5" colspan="3">
+     <widget class="QComboBox" name="comboBox_6">
+      <item>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>--</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>-.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>..</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="17" column="2">
+     <widget class="QLabel" name="label_16">
+      <property name="text">
+       <string>Xmax</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="2" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="label_17">
+      <property name="text">
+       <string>Scale size</string>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="1" colspan="3">
+     <widget class="QLineEdit" name="lineEdit_5"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Line style</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="7">
+     <widget class="QComboBox" name="comboBox_2">
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="8" column="4">
+     <widget class="QLabel" name="label_12">
+      <property name="text">
+       <string>Marker style</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="5" colspan="3">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+    </item>
+    <item row="18" column="0">
+     <widget class="QLabel" name="label_19">
+      <property name="text">
+       <string>Axis width</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="9" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="label_20">
+      <property name="text">
+       <string>*** LINES STYLES *** </string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Line width</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="4" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="label_23">
+      <property name="text">
+       <string>Title</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="6">
+     <widget class="QLabel" name="label_14">
+      <property name="text">
+       <string>Ymax</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="1">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_7"/>
+    </item>
+    <item row="21" column="0" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="label_24">
+      <property name="text">
+       <string>Ereorg</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="3">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_8"/>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Line color</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="pathToQDPTFilesLabel">
+      <property name="text">
+       <string>Path to QDPT files</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1" colspan="3">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+    </item>
+    <item row="18" column="5" colspan="3">
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="text">
+       <string>Energy profile</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="4">
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>Line width</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="3">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_4"/>
+    </item>
+    <item row="21" column="4" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="label_25">
+      <property name="text">
+       <string>Energy Gap</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="5" colspan="3">
+     <widget class="QComboBox" name="comboBox_8">
+      <item>
+       <property name="text">
+        <string>orange</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>blue</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>green</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>red</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>cyan</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>magenta</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>yellow</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>black</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="25" column="0" colspan="9">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Plot</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="9">
+     <widget class="QLabel" name="label_22">
+      <property name="text">
+       <string>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Marker size</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="1">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_3"/>
+    </item>
+    <item row="3" column="4" colspan="3" alignment="Qt::AlignRight">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>State №</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="4">
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>Line color</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="4">
+     <widget class="QLabel" name="label_13">
+      <property name="text">
+       <string>Marker size</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="8">
+     <widget class="QToolButton" name="toolButton">
+      <property name="text">
+       <string>...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="5" colspan="3">
+     <widget class="QLineEdit" name="lineEdit_4"/>
+    </item>
+    <item row="8" column="5" colspan="3">
+     <widget class="QComboBox" name="comboBox_9">
+      <item>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>o</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>v</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>^</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string extracomment="square">s</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>+</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>x</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>d</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>_</string>
+       </property>
+       <property name="icon">
+        <iconset theme="hline">
+         <normaloff>../../../.designer/backup</normaloff>../../../.designer/backup</iconset>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="21" column="1" colspan="3">
+     <widget class="QLineEdit" name="lineEdit_3"/>
+    </item>
+    <item row="24" column="0" colspan="9">
+     <widget class="QLabel" name="label_26">
+      <property name="text">
+       <string>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1" colspan="3">
+     <widget class="QComboBox" name="comboBox_4">
+      <item>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>o</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>v</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>^</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string extracomment="square">s</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>+</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>x</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>D</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>d</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>_</string>
+       </property>
+       <property name="icon">
+        <iconset theme="hline">
+         <normaloff>../../../.designer/backup</normaloff>../../../.designer/backup</iconset>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="17" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Xmin</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QComboBox" name="comboBox">
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="17" column="5">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_5"/>
+    </item>
+    <item row="5" column="4">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>Line style</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2" colspan="6">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="text">
+       <string>Enter path to folder with QDPT .out files  ---&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="0" alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="label_27">
+      <property name="text">
+       <string>ΔG</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Marker style</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="3" alignment="Qt::AlignRight">
+     <widget class="QLabel" name="label_2">
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="text">
+       <string>State №</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="5" colspan="3">
+     <widget class="QComboBox" name="comboBox_10">
+      <item>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="17" column="7">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox_6"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

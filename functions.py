@@ -621,7 +621,7 @@ def zmatrixgenerator(xyz1, xyz2, outfile1, outfile2, atomsinfirst):
     order = []
     zmatrix = []
     zmatrix2 = []
-    if atomsinfirst == 'Dimer' :
+    if atomsinfirst == 'Dimer':
         cartesiandimer = read_cartesian(xyz1)
         atomsinsystem = len(cartesiandimer)//2
         cartesian = cartesiandimer[:atomsinsystem]
@@ -998,20 +998,13 @@ def zmatrixgenerator(xyz1, xyz2, outfile1, outfile2, atomsinfirst):
         izmat.write(str_zmatrix(zmatrix)[1])
 
 
-def file_generator(settings_file, data_file_left, data_file_right, path, step, outfile_mask, atomsinfirstmolecule):
-
-    #settings_file = 'C:/Users/ilya_/PycharmProjects/chemapp/venv/settings.inp'
-    #data_file_left = r'C:\Users\ilya_\PycharmProjects\chemapp\venv\tpbi1.xyz'
-    #data_file_right = r'C:\Users\ilya_\PycharmProjects\chemapp\venv\tpbi2.xyz'
-    #path = 'C:/Users/ilya_/PycharmProjects/chemapp/venv/inpfiles'
-    if outfile_mask == '':
-        outfile_mask = 'default'
-
-    if step == 0 :
-        step = 0.1
+def file_generator(settings_file, data_file_left, data_file_right, path, step, outfile_mask='outfile', atomsinfirstmolecule='Dimer'):
 
     totaldict = dict()
     a = Converter()
+
+    if step == 0.00:
+        step = 0.01
 
     zmatrixgenerator(data_file_left, data_file_right, 'zmatrix1.dat', 'zmatrix2.dat', atomsinfirstmolecule)
 
