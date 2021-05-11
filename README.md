@@ -1,7 +1,7 @@
 # ScanEP
 
 
-ScanEP is a multimodule programm that helps to calculate energy profiles. It include next modules:
+ScanEP is a multimodule program that helps to calculate energy profiles. It include next modules:
   - VEC Changer
   - Method changer
   - Inp files generator
