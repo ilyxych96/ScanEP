@@ -621,7 +621,7 @@ def zmatrixgenerator(xyz1, xyz2, outfile1, outfile2, atomsinfirst):
     order = []
     zmatrix = []
     zmatrix2 = []
-    if atomsinfirst == 'Dimer':
+    if atomsinfirst == 'Dimer' :
         cartesiandimer = read_cartesian(xyz1)
         atomsinsystem = len(cartesiandimer)//2
         cartesian = cartesiandimer[:atomsinsystem]
@@ -998,13 +998,14 @@ def zmatrixgenerator(xyz1, xyz2, outfile1, outfile2, atomsinfirst):
         izmat.write(str_zmatrix(zmatrix)[1])
 
 
-def file_generator(settings_file, data_file_left, data_file_right, path, step, outfile_mask='outfile', atomsinfirstmolecule='Dimer'):
+def file_generator(settings_file, data_file_left, data_file_right, path, step, outfile_mask, atomsinfirstmolecule):
+    if outfile_mask == '':
+        outfile_mask = 'default'
+    if step == 0:
+        step = 0.01
 
     totaldict = dict()
     a = Converter()
-
-    if step == 0.00:
-        step = 0.01
 
     zmatrixgenerator(data_file_left, data_file_right, 'zmatrix1.dat', 'zmatrix2.dat', atomsinfirstmolecule)
 
@@ -1364,13 +1365,13 @@ def file_generator(settings_file, data_file_left, data_file_right, path, step, o
         shutil.move(filename, path+'/xyz')
 
     os.remove('izmat.tmp')
-    os.remove('zmatrix1.tmp')
-    os.remove('zmatrix2.tmp')
-    os.remove('zmatrix1.dat')
-    os.remove('zmatrix2.dat')
-    os.remove('zmatrix1out.txt')
-    os.remove('zmatrix2out.txt')
-    os.remove('tempgeom.txt')
+    #os.remove('zmatrix1.tmp')
+    #os.remove('zmatrix2.tmp')
+    #os.remove('zmatrix1.dat')
+    #os.remove('zmatrix2.dat')
+    #os.remove('zmatrix1out.txt')
+    #os.remove('zmatrix2out.txt')
+    #os.remove('tempgeom.txt')
 
 
 def method_changer(path, NEW_SET) :
@@ -1774,7 +1775,6 @@ def packdelimiter(inputfile, minatomsinmol, maxcontact):
                 if line != '\n':
                     molecules.append(molecule)
                     molecule = []
-
         molecules.append(molecule)
         return molecules
 
@@ -1816,7 +1816,7 @@ def packdelimiter(inputfile, minatomsinmol, maxcontact):
         return currentlength
 
     def molecular_delimeter(xyz):
-        bondlength = 1.7
+        bondlength = 2
         molecule = []
         workspace = []
         item1 = xyz[0]
@@ -1825,16 +1825,19 @@ def packdelimiter(inputfile, minatomsinmol, maxcontact):
         workspace.append(item1)
         del xyz[i]
 
+        # ДИКИЙ КОСТЫЛЬ
         for item in xyz:
             currlength = interatomlength(item1, item)
             if item1[0] == 1 or 'H':
                 maxcontacts = 2
             elif item1[0] == 6 or 'C':
                 maxcontacts = 4
-            elif item1[0] == 8 or 'O':
+            elif item1[0] == 8 or 'O' or 16 or 'S':
                 maxcontacts = 2
             elif item1[0] == 7 or 'N':
                 maxcontacts = 3
+            else:
+                maxcontacts = 2
 
             if len(workspace) >= maxcontacts:
                 break
@@ -1973,29 +1976,31 @@ def packdelimiter(inputfile, minatomsinmol, maxcontact):
     cartesian = read_cartesian(inputfile)
 
     allAmountOfAtoms = len(cartesian)
-    #self.ui.statusbar.showMessage('\nAtoms in system: ' + str(allAmountOfAtoms))
+    # self.ui.statusbar.showMessage('\nAtoms in system: ' + str(allAmountOfAtoms))
 
     # building monomer
-    #self.ui.statusbar.showMessage('Monomers building in process...')
+    # self.ui.statusbar.showMessage('Monomers building in process...')
     stoptest = 1
-    sortedmolecule = []
+    # sortedmolecule = []
     while stoptest:
         molecule = molecular_delimeter(cartesian)
         cartesian = molecule[1]
-        sortedmolecule = []
+        #sortedmolecule = []
         if len(molecule[0]) > int(minatomsinmol):
             molecules.append(molecule[0])
         stoptest = len(molecule[1])
-        #self.ui.statusbar.showMessage('Monomers building in process ' + str(percent_indicator(len(cartesian), allAmountOfAtoms)) + '/100')
 
+
+
+        # self.ui.statusbar.showMessage('Monomers building in process ' + str(percent_indicator(len(cartesian), allAmountOfAtoms)) + '/100'
     output_cartesian(molecules, output_file=outmonomer)
 
     molecules = read_monomers(outmonomer)[1:]
 
     lineprev = ''
     monomer_time = time.time() - start_time
-    #self.ui.statusbar.showMessage('\nMonomers building complete by {:<.3} seconds\n'.format(monomer_time))
-    #self.ui.statusbar.showMessage('Pairs building in process...')
+    # self.ui.statusbar.showMessage('\nMonomers building complete by {:<.3} seconds\n'.format(monomer_time))
+    # self.ui.statusbar.showMessage('Pairs building in process...')
     # find contact dimers
     dimers = []
     uniquelength = []
@@ -2013,16 +2018,16 @@ def packdelimiter(inputfile, minatomsinmol, maxcontact):
                         uniquelength.append(dimer[4])
                         dimers.append(dimer)
             j += 1
-        #self.ui.statusbar.showMessage('Pairs building in process ' + str(percent_indicator(len(molecules) - i, len(molecules))) + '/100')
+        # self.ui.statusbar.showMessage('Pairs building in process ' + str(percent_indicator(len(molecules) - i, len(molecules))) + '/100')
         i += 1
 
-    #self.ui.statusbar.showMessage('Pairs building in process 100.0/100\n')
+    # self.ui.statusbar.showMessage('Pairs building in process 100.0/100\n')
     dimers.sort(key=lambda i: i[4])
     dimer_output(dimers, outdimer)
 
     center_monomers(molecules, outmonomer)
 
-    dimer_time = time.time() - start_time - monomer_time
-    #self.ui.statusbar.showMessage('Monomers building complete by {:<.3} seconds'.format(monomer_time))
-    #self.ui.statusbar.showMessage('Pairs building complete by {:<.3} seconds'.format(dimer_time))
-    #self.ui.statusbar.showMessage('Total time: {:<.3} seconds'.format(dimer_time + monomer_time))
+    # dimer_time = time.time() - start_time - monomer_time
+    # self.ui.statusbar.showMessage('Monomers building complete by {:<.3} seconds'.format(monomer_time))
+    # self.ui.statusbar.showMessage('Pairs building complete by {:<.3} seconds'.format(dimer_time))
+    # self.ui.statusbar.showMessage('Total time: {:<.3} seconds'.format(dimer_time + monomer_time))
