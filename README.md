@@ -45,12 +45,19 @@ ScanEP is a multimodule program that helps to calculate energy profiles. It incl
 
 Download all files in directory .../ScanEp/
 
-The following libraries are required to run:
->PqQT5, os, re, glob, shutil, matplotlib, numpy, math, copy, time.
+Install libriries from requirements.txt and run ScanEP.pyw
 
-If you have all this packages, run ScanEp.pyw
+## Build .exe
+1) Install pyinstaller
+2) Insert path to ScanEP folder at the path place and run:
+3) Run one of next commands:
+  1) All in one exe (may be unstable)
+     pyinstaller --noconfirm --onefile --windowed --icon "path/icon.ico"  "path/ScanEP.pyw"
+ 
+  2) Exe in directory (recommended):
+     pyinstaller --noconfirm --onedir --windowed --icon "path/icon.ico"  "path/ScanEP.pyw"
 
-## Todos
+## ToDo
 
  - MORE Tests
  - Upgrade z-matrix builder for 3+ molecules
